@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>BMI</title>
+    </head>
+    <body>
+        <h1>BMI calculator</h1>
+        <input id="height" type="number">
+        <br />
+        <input id="weight" type="number">
+        <br />
+        <button onclick="cal()">Calculate your BMI</button>
+    </body>
+    <script type="text/javascript">
+        var cal = () => {
+            let bmi = document.getElementById("weight").value/Math.pow(document.getElementById("height").value*0.01, 2)
+            let warn
+            
+            if (bmi < 18.5) 
+                warn = "Too thin"
+            else if (bmi>=18.5 && bmi<24)
+                warn = "Normal"
+            else if (bmi>=24 && bmi<27)
+                warn = "Slightly heavier"
+            else if (bmi>=27 && bmi<30)
+                warn = "Overweight"
+            else 
+                warn = "You should go on a diet"
+            
+            alert(`BMI: ${bmi}, Warning: ${warn}`)
+        }
+    </script>
+</html>
