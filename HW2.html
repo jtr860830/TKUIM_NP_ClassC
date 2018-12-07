@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>BMI</title>
@@ -11,7 +12,7 @@
         <button onclick="cal()">Calculate your BMI</button>
     </body>
     <script type="text/javascript">
-        var cal = () => {
+        const cal = () => {
             let bmi = document.getElementById("weight").value/Math.pow(document.getElementById("height").value*0.01, 2)
             let warn
             
